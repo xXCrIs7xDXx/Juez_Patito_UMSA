@@ -1,21 +1,16 @@
 def java_round(number, decimals=2):
-    """
-    Emula el comportamiento de redondeo de Java.
-    """
+    
     factor = 10 ** decimals
     return int(number * factor + (0.5 if number >= 0 else -0.5)) / factor
 
 def calcular_porcentajes(jardin):
-    # Inicializar contadores para cada vocal
     total = len(jardin)
     conteo = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
     
-    # Contar vocales
     for c in jardin:
         if c in conteo:
             conteo[c] += 1
     
-    # Imprimir resultados
     for vocal in ['a', 'e', 'i', 'o', 'u']:
         if total == 0:
             porcentaje = 0.0
